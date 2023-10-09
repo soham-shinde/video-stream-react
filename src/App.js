@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './css/style.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import MoviePlayer from './pages/MoviePlayer';
+import NoPage from './pages/NoPage';
+import MoviesListPage from './pages/MoviesListPage';
 function App() {
+  const imageUrl = `${process.env.PUBLIC_URL}/img/banner-img.jpeg`;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="movies-list" element={<MoviesListPage />} />
+          <Route path="movie-player/:videoId" element={<MoviePlayer />} />
+          <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
