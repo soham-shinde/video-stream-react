@@ -9,17 +9,17 @@ export default function MoviesListPage() {
     return (
         <>
             <Navbar />
-            <div class="pos-container">
-                <div class="pos-item">
-                    <div class="into-v-container">
+            <div className="pos-container">
+                <div className="pos-item">
+                    <div className="into-v-container">
                         <AutoPlayVideo />
                     </div>
-                    <div class="pos-info">
-                        <div class="pos-button">
+                    <div className="pos-info">
+                        <div className="pos-button">
                             <img src="./img/logo.svg" alt="" />
                             Watch Now
                         </div>
-                        <div class="pos-desc">
+                        <div className="pos-desc">
                             Lorem ipsum dolor sit  consectetur, adipisicing elit. Voluptas vitae minima, ipsum odio dolor
                             velit recusandae tempore magnam corrupti quam, sint dolore voluptates architecto labore fugiat ipsam
                             libero modi natus.

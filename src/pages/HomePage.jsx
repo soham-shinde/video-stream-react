@@ -14,12 +14,12 @@ export default function HomePage() {
     return (
         <>
             <Navbar />
-            <div class="banner-container" style={{
+            <div className="banner-container" style={{
                 background: "linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%), url('/img/banner-img.jpeg'), lightgray 50% / cover no-repeat"
 
             }}>
-                <div class="back-blur">
-                    <div class="logo-1">
+                <div className="back-blur">
+                    <div className="logo-1">
                         <img src="img/logo.svg" alt="" />
                         Video Stream
                     </div>
@@ -43,30 +43,30 @@ export default function HomePage() {
 
                         >
                             <SwiperSlide style={{ width: "37rem", height: "25rem", position: "relative" }}>
-                                <div class="carousel-item">
-                                    <div class="card">
-                                        <img class="card-image" src="./img/back/back-1.jpg" alt="" />
+                                <div className="carousel-item">
+                                    <div className="card">
+                                        <img className="card-image" src="./img/back/back-1.jpg" alt="" />
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{ width: "37rem", height: "25rem", position: "relative" }}>
-                                <div class="carousel-item">
-                                    <div class="card">
-                                        <img class="card-image" src="./img/back/back-2.jpg" alt="" />
+                                <div className="carousel-item">
+                                    <div className="card">
+                                        <img className="card-image" src="./img/back/back-2.jpg" alt="" />
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{ width: "37rem", height: "25rem", position: "relative" }}>
-                                <div class="carousel-item">
-                                    <div class="card">
-                                        <img class="card-image" src="./img/back/back-3.jpg" alt="" />
+                                <div className="carousel-item">
+                                    <div className="card">
+                                        <img className="card-image" src="./img/back/back-3.jpg" alt="" />
                                     </div>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide style={{ width: "37rem", height: "25rem", position: "relative" }}>
-                                <div class="carousel-item">
-                                    <div class="card">
-                                        <img class="card-image" src="./img/back/back-5.jpg" alt="" />
+                                <div className="carousel-item">
+                                    <div className="card">
+                                        <img className="card-image" src="./img/back/back-5.jpg" alt="" />
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -74,14 +74,14 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="mo-list">
+            <div className="container">
+                <div className="mo-list">
                     <h3>New Release</h3>
                     <div id="slider-container">
                         <CardSlider cards={getMoviesList(10)} />
                     </div>
                 </div>
-                <div class="mo-list">
+                <div className="mo-list">
                     <h3>Popular films</h3>
                     <div id="slider-container">
                         <CardSlider cards={getMoviesList(10)} />
@@ -98,36 +98,36 @@ export default function HomePage() {
                         loop={true}
                     >
                         <SwiperSlide style={{width:"50rem"}}>
-                            <div class="card">
-                                <img class="card-image" src="./img/back/back-1.jpg" alt="" />
+                            <div className="card">
+                                <img className="card-image" src="./img/back/back-1.jpg" alt="" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide style={{width:"50rem"}}>
-                            <div class="card">
-                                <img class="card-image" src="./img/back/back-2.jpg" alt="" />
+                            <div className="card">
+                                <img className="card-image" src="./img/back/back-2.jpg" alt="" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide style={{width:"50rem"}}>
-                            <div class="card">
-                                <img class="card-image" src="./img/back/back-3.jpg" alt="" />
+                            <div className="card">
+                                <img className="card-image" src="./img/back/back-3.jpg" alt="" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide style={{width:"50rem"}}>
-                            <div class="card">
-                                <img class="card-image" src="./img/back/back-4.jpg" alt="" />
+                            <div className="card">
+                                <img className="card-image" src="./img/back/back-4.jpg" alt="" />
                             </div>
                         </SwiperSlide>
                         
                     </Swiper>
                 </div>
 
-                <div class="mo-list">
+                <div className="mo-list">
                     <h3>Action Movies</h3>
                     <div id="slider-container">
                         <CardSlider cards={getMoviesList(10)} />
                     </div>
                 </div>
-                <div class="mo-list">
+                <div className="mo-list">
                     <h3>Hindi Drama Movies</h3>
                     <div id="slider-container">
                         <CardSlider cards={getMoviesList(10)} />

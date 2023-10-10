@@ -4,15 +4,15 @@ import { useNavigate } from 'react-router-dom'
 export default function MPosterCard({ element }) {
     const navigator = useNavigate();
     return (
-        <div class="m-card" onClick={()=>{
+        <div className="m-card" onClick={()=>{
             navigator(`/movie-player/${element.title}`)
 
         }}>
-            <div class="m-card-overlay"></div>
-            <img class="m-card-image" src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt="" />
-            <div class="m-card-details fadeIn-bottom">
-                <h3 class="m-card-title">{element.title}</h3>
-                <p class="m-card-text">{element.genres}</p>
+            <div className="m-card-overlay"></div>
+            <img className="m-card-image" src={`https://image.tmdb.org/t/p/w500${element.poster_path}`} alt="" />
+            <div className="m-card-details fadeIn-bottom">
+                <h3 className="m-card-title">{element.title}</h3>
+                <p className="m-card-text">{element.genres}</p>
             </div>
 
         </div>

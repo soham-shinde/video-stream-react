@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
     <>
-    <nav class="navbar">
-            <div class="logo">
+    <nav className="navbar">
+            <div className="logo">
                 <img src="/img/logo.svg" alt="" />
                 Video Stream
             </div>
-            <ul class="ul-1">
+            <ul className="ul-1">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/movies-list">Movies</Link>
-                    <ul class="sub-list">
+                    <ul className="sub-list">
                         <li><Link to="/movies-list">All Movies</Link></li>
                         <li>Genres
-                            <ul class="sub-list-2">
+                            <ul className="sub-list-2">
                                 <li><Link to="/movies-list">Science Fiction</Link></li>
                                 <li><Link to="/movies-list">Fantasy</Link></li>
                                 <li><Link to="/movies-list">Adventure</Link></li>
@@ -31,7 +31,7 @@ export default function Navbar() {
                             </ul>
                         </li>
                         <li><Link to="/movies-list">Language</Link>
-                            <ul class="sub-list-2">
+                            <ul className="sub-list-2">
                                 <li><Link to="/movies-list">Hindi</Link></li>
                                 <li><Link to="/movies-list">English</Link></li>
                                 <li><Link to="/movies-list">Tamil</Link></li>
@@ -55,10 +55,10 @@ export default function Navbar() {
                     </ul>
                 </li>
             </ul>
-            <div class="nav-search-bar">
-                <input type="text" class="nav-i" placeholder="Search favorite movie here " name="" id="" />
+            <div className="nav-search-bar">
+                <input type="text" className="nav-i" placeholder="Search favorite movie here " name="" id="" />
             </div>
-            <div class="sd-s">
+            <div className="sd-s">
                 <li><Link to="/"><img src="/img/heart-icon.svg" alt=""/></Link></li>
                 <li><Link to="/login"><img src="/img/user-icon.svg" alt=""/></Link></li>
             </div>

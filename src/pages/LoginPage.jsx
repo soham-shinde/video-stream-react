@@ -164,31 +164,31 @@ export default function LoginPage() {
   return (
     <>
       <Navbar />
-      <div class="l-container">
-        <div class="main-container">
+      <div className="l-container">
+        <div className="main-container">
 
-          <div id="l-overlay" class="l-overlay">
+          <div id="l-overlay" className="l-overlay">
 
-            {!login && <div class="l-overlay-inner">
-              <div class="l-icon">
+            {!login && <div className="l-overlay-inner">
+              <div className="l-icon">
                 <img src="img/icons/register user icon.svg" alt="" />
               </div>
-              <div class="l-message">
+              <div className="l-message">
                 <p id="l-message">Don't have Account?</p>
               </div>
-              <button class="l-btn" onClick={handelMove}>
+              <button className="l-btn" onClick={handelMove}>
                 Register
               </button>
             </div>}
 
-            {login && <div class="l-overlay-inner">
-              <div class="l-icon">
+            {login && <div className="l-overlay-inner">
+              <div className="l-icon">
                 <img src="img/icons/register user icon.svg" alt="" />
               </div>
-              <div class="l-message">
+              <div className="l-message">
                 <p id="l-message">Already have Account?</p>
               </div>
-              <button class="l-btn" onClick={handelMove}>
+              <button className="l-btn" onClick={handelMove}>
                 Login
               </button>
             </div>
@@ -196,14 +196,14 @@ export default function LoginPage() {
 
           </div>
 
-          <div class="login-container">
-            <div class="login-inner">
-              <div class="login-title">
+          <div className="login-container">
+            <div className="login-inner">
+              <div className="login-title">
                 <h3>Login</h3>
               </div>
 
-              <div class="form">
-                <form class="f-container"  onSubmit={handleSubmit}>
+              <div className="form">
+                <form className="f-container"  onSubmit={handleSubmit}>
 
                   <div className="form-group">
                     <input className="useremail" placeholder="Email id" type="email" name="email" value={loginData.email} onChange={handleChangeLogin} required />
@@ -223,13 +223,13 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <div class="login-container">
-            <div class="login-inner">
-              <div class="login-title">
+          <div className="login-container">
+            <div className="login-inner">
+              <div className="login-title">
                 <h3>Register</h3>
               </div>
 
-              <form class="f-container" onSubmit={handleSignUpForm}>
+              <form className="f-container" onSubmit={handleSignUpForm}>
                 <div className="form-group">
                   <input placeholder="Username" className="username" type="text" name="name" value={signUpData.name} onChange={handleChange} required/>
                   <div className="error-message">{errorsSign.name}</div>

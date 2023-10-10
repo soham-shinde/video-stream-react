@@ -20,7 +20,7 @@ export default function CastCardSlider({cards}) {
     };
 
     return (
-        <><div onClick={goPrev} class="c-btns">
+        <><div onClick={goPrev} className="c-btns">
             <img src="/img/pre-icon.svg" alt="" />
         </div>
 
@@ -39,7 +39,7 @@ export default function CastCardSlider({cards}) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div onClick={goNext} class="c-btns">
+            <div onClick={goNext} className="c-btns">
                 <img src="/img/next-icon.svg" alt="" />
             </div>
         </>

@@ -14,7 +14,7 @@ export default function MoviePlayer() {
       <div className='video-p-container'>
         <VideoPlayer />
       </div>
-      <div class="mo-list">
+      <div className="mo-list">
                     <h3>Cast</h3>
                     <div id="slider-container">
                         <CastCardSlider cards={getCastList()} />
