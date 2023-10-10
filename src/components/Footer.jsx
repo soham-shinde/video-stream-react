@@ -8,10 +8,10 @@ export default function Footer() {
                 Video Stream
             </div>
             <div class="s-icons">
-                <img class="s-icon" src="./img/facebook-round-color-icon.svg" alt="" />
-                <img class="s-icon" src="./img/instagram-round-color-icon.svg" alt="" />
-                <img class="s-icon" src="./img/twitter-round-color-icon.svg" alt="" />
-                <img class="s-icon" src="./img/youtube-round-color-icon.svg" alt="" />
+                <img class="s-icon" src="/img/facebook-round-color-icon.svg" alt="" />
+                <img class="s-icon" src="/img/instagram-round-color-icon.svg" alt="" />
+                <img class="s-icon" src="/img/twitter-round-color-icon.svg" alt="" />
+                <img class="s-icon" src="/img/youtube-round-color-icon.svg" alt="" />
             </div>
             <div class="c-f-name">
                 &copy; 2023 Video Stream.com . All Rights Reserved.

@@ -5,7 +5,7 @@ export default function MPosterCard({ element }) {
     const navigator = useNavigate();
     return (
         <div class="m-card" onClick={()=>{
-            navigator(`/movie-player/${element.id}`)
+            navigator(`/movie-player/${element.title}`)
 
         }}>
             <div class="m-card-overlay"></div>

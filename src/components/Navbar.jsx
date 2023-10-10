@@ -6,11 +6,11 @@ export default function Navbar() {
     <>
     <nav class="navbar">
             <div class="logo">
-                <img src="img/logo.svg" alt="" />
+                <img src="/img/logo.svg" alt="" />
                 Video Stream
             </div>
             <ul class="ul-1">
-                <li><Link to="">Home</Link></li>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/movies-list">Movies</Link>
                     <ul class="sub-list">
                         <li><Link to="/movies-list">All Movies</Link></li>
@@ -59,8 +59,8 @@ export default function Navbar() {
                 <input type="text" class="nav-i" placeholder="Search favorite movie here " name="" id="" />
             </div>
             <div class="sd-s">
-                <li><Link to="/"><img src="./img/heart-icon.svg" alt=""/></Link></li>
-                <li><Link to="/login"><img src="./img/user-icon.svg" alt=""/></Link></li>
+                <li><Link to="/"><img src="/img/heart-icon.svg" alt=""/></Link></li>
+                <li><Link to="/login"><img src="/img/user-icon.svg" alt=""/></Link></li>
             </div>
         </nav>
     </>

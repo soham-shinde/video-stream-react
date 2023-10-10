@@ -106,6 +106,7 @@ body {
 .ul-1 li {
     margin: 0 auto;
     padding: 10px 15px;
+    position: relative;
 }
 
 .ul-1 li a {
@@ -131,7 +132,8 @@ body {
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
-    top: 70%;
+    top: 100%;
+    left: -20px;
 }
 .ul-1 li:hover .sub-list{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
