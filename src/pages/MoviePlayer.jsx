@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import VideoPlayer from '../components/VideoPlayer'
 import { getCastList, getMoviesList } from '../api/api-module'
@@ -6,13 +6,19 @@ import MPosterCard from '../components/MPosterCard'
 import StoryDescription from '../components/StoryDescription'
 import CastCardSlider from '../components/CastCardSlider'
 import Footer from '../components/Footer'
+import { useParams } from 'react-router-dom'
 
 export default function MoviePlayer() {
+  const {videoId} = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [videoId]);
   return (
     <>
       <Navbar />
       <div className='video-p-container'>
-        <VideoPlayer />
+        <VideoPlayer videoId={videoId}/>
       </div>
       <div className="mo-list">
                     <h3>Cast</h3>

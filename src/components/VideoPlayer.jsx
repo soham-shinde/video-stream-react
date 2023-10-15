@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const VideoPlayer = ({videoData}) => {
+const VideoPlayer = ({videoId}) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -38,7 +38,7 @@ const VideoPlayer = ({videoData}) => {
             <div id="video-overlay" className="video-overlay" style={{ display: isPlaying ? 'none' : 'block' }}>
                 <div className="video-overlay-body">
                     <div className="title">
-                        <h3>Jawaan</h3>
+                        <h3>{videoId}</h3>
                     </div>
                     <div className="extra">
                         <p>2hr 31min Action 2023 WA 16+</p>

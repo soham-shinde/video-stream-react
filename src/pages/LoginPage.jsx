@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom';
+import { MultiChoiceDialog, MultiLanguageChoice } from '../components/MultiChoiceDialog';
 
 export default function LoginPage() {
   const navigator = useNavigate();
@@ -25,6 +26,8 @@ export default function LoginPage() {
     password: '',
     confirmPassword: '',
   });
+
+  const [multiChoice, setMultiChoice] = useState(false);
 
 
   function handelMove(e) {
@@ -98,13 +101,15 @@ export default function LoginPage() {
 
     setErrorsSign(newErrorsSign);
 
+
     return Object.values(newErrorsSign).every((error) => error === '');
   };
 
   const handleSignUpForm = (event) => {
     event.preventDefault();
 
-    if (validateForm()) {
+    if (true) {
+      setMultiChoice(true);
       console.log('Form data:', signUpData);
     } else {
       console.log('Form submission blocked due to errorsSign');
@@ -206,12 +211,12 @@ export default function LoginPage() {
                 <form className="f-container"  onSubmit={handleSubmit}>
 
                   <div className="form-group">
-                    <input className="useremail" placeholder="Email id" type="email" name="email" value={loginData.email} onChange={handleChangeLogin} required />
+                    <input className="useremail" placeholder="Email id" type="text" name="email" value={loginData.email} onChange={handleChangeLogin}  />
                     <div className="error-message">{errors.email}</div>
                   </div>
 
                   <div className="form-group">
-                    <input className="userpassword" placeholder="Password" type="password" name="password" value={loginData.password} onChange={handleChangeLogin} required />
+                    <input className="userpassword" placeholder="Password" type="password" name="password" value={loginData.password} onChange={handleChangeLogin}  />
                     <div className="error-message">{errors.password}</div>
                   </div>
 
@@ -231,27 +236,27 @@ export default function LoginPage() {
 
               <form className="f-container" onSubmit={handleSignUpForm}>
                 <div className="form-group">
-                  <input placeholder="Username" className="username" type="text" name="name" value={signUpData.name} onChange={handleChange} required/>
+                  <input placeholder="Username" className="username" type="text" name="name" value={signUpData.name} onChange={handleChange} />
                   <div className="error-message">{errorsSign.name}</div>
                 </div>
 
                 <div className="form-group">
-                  <input placeholder="Phone" className="userphone" type="text" name="phone" value={signUpData.phone} onChange={handleChange} required/>
+                  <input placeholder="Phone" className="userphone" type="text" name="phone" value={signUpData.phone} onChange={handleChange} />
                   <div className="error-message">{errorsSign.phone}</div>
                 </div>
 
                 <div className="form-group">
-                  <input placeholder="Email" className="useremail" type="email" name="email" value={signUpData.email} onChange={handleChange} required/>
+                  <input placeholder="Email" className="useremail" type="email" name="email" value={signUpData.email} onChange={handleChange} />
                   <div className="error-message">{errorsSign.email}</div>
                 </div>
 
                 <div className="form-group">
-                  <input placeholder="Password" className="userpassword" type="password" name="password" value={signUpData.password} onChange={handleChange} required/>
+                  <input placeholder="Password" className="userpassword" type="password" name="password" value={signUpData.password} onChange={handleChange} />
                   <div className="error-message">{errorsSign.password}</div>
                 </div>
 
                 <div className="form-group">
-                  <input placeholder="Confirm Password" className="userpassword" type="password" name="confirmPassword" value={signUpData.confirmPassword} onChange={handleChange} required/>
+                  <input placeholder="Confirm Password" className="userpassword" type="password" name="confirmPassword" value={signUpData.confirmPassword} onChange={handleChange} />
                   <div className="error-message">{errorsSign.confirmPassword}</div>
                 </div>
 
@@ -263,6 +268,7 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+      {multiChoice &&<MultiChoiceDialog />}
     </>
   )
 }
